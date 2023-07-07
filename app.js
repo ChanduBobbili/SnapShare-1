@@ -25,7 +25,7 @@ app.use(session({
         resave: false,
         saveUninitialized: false,
         store: mongoStore.create({
-            mongoUrl: process.env.MONGODB_URL;
+            mongoUrl: process.env.MONGODB_URL,
         })
     })
 );

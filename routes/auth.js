@@ -27,7 +27,7 @@ router.post('/register', (req, res)=> {
     });
 });
 
-router.post('/login', passport.authenticate('local', { successRedirect: '/profile',failureRedirect: '/login'}), (req, res)=> {
+router.post('/login', passport.authenticate('local', { successRedirect: '/profile',failureRedirect: '/auth/login'}), (req, res)=> {
     console.log('logged success');
     // res.redirect('/profile');
 });

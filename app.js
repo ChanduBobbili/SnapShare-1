@@ -25,7 +25,7 @@ app.use(session({
         resave: false,
         saveUninitialized: false,
         store: mongoStore.create({
-            mongoUrl: 'mongodb+srv://chandubobbili06:NPDuilJk9zC0DEfZ@cluster0.m8zkzmd.mongodb.net/?retryWrites=true&w=majority/snapshare'
+            mongoUrl: 'mongodb+srv://chandubobbili06:NPDuilJk9zC0DEfZ@cluster0.m8zkzmd.mongodb.net/?retryWrites=true&w=majority/test'
         })
     })
 );

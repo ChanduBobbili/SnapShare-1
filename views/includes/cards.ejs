@@ -1,0 +1,16 @@
+<% for( const post of posts )  { %>
+
+    <div class="card swiper-slide">
+        <div class="image-box">
+            <img src="<%= post.imagePath[0] %>" alt="" />
+        </div>
+        <div class="profile-details">
+            <img src="<%= post.profilePath %>" alt="" />
+            <div class="name-job">
+                <h3 class="name"><%= post.name %></h3>
+                <!-- <h4 class="job"><%= post.caption %></h4> -->
+            </div>
+        </div>
+    </div>
+    
+<% } %>

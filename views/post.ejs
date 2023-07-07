@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Discover</title>
+    <!-- CSS FILES -->        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="/css/templatemo-festava-live.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/swiper-style.css" />
+    <style>
+        .services-info img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+      .swiper {
+      	width: 100%;
+        height: 100%;
+      }
+      .swiper-slide {
+      	background-color: #000;
+      }
+      .swiper-slide img {
+      	display: block;
+      	width: 100%;
+      	height: 100%;
+      	object-fit: cover;
+      }
+      .swiper button {
+      	width: 50px;
+      	height: 50px;
+      	color: #fff;
+      	background: transparent;
+      	border: none;
+      	outline: none;
+      	transition: opacity 0.25s;
+      }
+      .swiper button:hover {
+      	opacity: 0.8;
+      }
+      .swiper button::before,
+      .swiper button::after {
+      	font-size: 24px;
+      }
+      .swiper-button-prev {
+      	left: 25px;
+      }
+      .swiper-button-next {
+      	right: 25px;
+      }
+      .swiper-pagination-bullet {
+      	background-color: #fff;
+      }
+    </style>
+</head>
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/">SnapShare</a>
+                <!-- <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                        <li class="nav-item d-none">
+                            <a class="nav-link click-scroll" href="/">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/discover">Discover <i class="bi bi-compass"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/#section_3">About <i class="bi bi-broadcast-pin"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/upload">Post <i class="bi bi-camera"></i></a>
+                        </li>
+                        
+
+                        <li class="nav-item d-none">
+                            <a class="nav-link click-scroll" href="#section_5">Pricing</a>
+                        </li>
+                        <li class="nav-item d-none">
+                            <a class="nav-link click-scroll" href="#section_6">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a> -->
+                </div>
+            </div>
+        </nav>
+
+        
+        <div class="container-discover">
+            <section class="about-section section-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                            <div class="services-info">
+                                <div class="d-inline">
+                                    <img src="<%= post.profilePath %>" alt="profile" />
+                                    <h2 class="text-white mb-4"><%= post.name %></h2>
+                                </div>
+                                <!-- <p class="text-white"></p> -->
+                                <p class="text-white"><%= post.message %></p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-12">
+                            <div class="about-text-wrap">
+                                <% if( post.imagePath.length === 1) { %>
+                                    <img src="<%= post.imagePath[0] %> " alt="post" class="about-image img-fluid">
+                                <% } else { %>
+                            </div>
+                            <div class="swiper carousel">
+                                <div class="swiper-wrapper">
+                                    <% for( const path of post.imagePath) { %>
+                                        <div class="swiper-slide">
+                                            <img src="<%= path %> " alt="" />
+                                          </div>
+                                    <% } %> 
+                                </div>
+                                <button type="button" class="swiper-button-next"></button>
+                                <button type="button" class="swiper-button-prev"></button>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <% } %>
+                        </div>
+            
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+    <footer class="sticky-bottom site-footer">
+        <div class="site-footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-12 mt-5 align-content-center justify-content-center ">
+                        <p class="copyright-text">Copyright © 2023 Chandu Bobbili</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".carousel", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+    
+    <!-- JAVASCRIPT FILES -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.sticky.js"></script>
+    <script src="/js/click-scroll.js"></script>
+    <script src="/js/custom.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/swiper-script.js"></script>
+    
+    </body>
+    </html>

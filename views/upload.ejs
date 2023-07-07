@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Discover</title>
+    <!-- CSS FILES -->        
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/templatemo-festava-live.css" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/swiper-style.css" />
+</head>
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="/">SnapShare</a>
+                <!-- <a href="ticket.html" class="btn custom-btn d-lg-none ms-auto me-4">Buy Ticket</a> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav align-items-lg-center ms-auto me-lg-5">
+                        <li class="nav-item d-none">
+                            <a class="nav-link click-scroll" href="/">Home</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/discover">Discover <i class="bi bi-compass"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/#section_3">About <i class="bi bi-broadcast-pin"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="/upload">Post <i class="bi bi-camera"></i></a>
+                        </li>
+                        
+
+                        <li class="nav-item d-none">
+                            <a class="nav-link click-scroll" href="#section_5">Pricing</a>
+                        </li>
+                        <li class="nav-item d-none">
+                            <a class="nav-link click-scroll" href="#section_6">Contact</a>
+                        </li>
+                    </ul>
+
+                    <!-- <a href="ticket.html" class="btn custom-btn d-lg-block d-none">Buy Ticket</a> -->
+                </div>
+            </div>
+        </nav>
+
+        
+        <div class="container-discover">
+            <div class="container d-flex justify-content-center align-items-center">
+                <form class="custom-form contact-form mb-5 mb-lg-0" action="/upload" method="POST" role="form" enctype="multipart/form-data">
+                    <div class="contact-form-body">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <input type="text" name="fullname" id="contact-name" class="form-control" placeholder="Full name" required>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <input type="email" name="email" id="contact-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <!-- <input type="text" name="caption" id="contact-company" class="form-control" placeholder="Caption" required> -->
+                        <textarea name="message" rows="3" class="form-control" id="contact-message" placeholder="Message" required></textarea>
+                        
+                        <label for="profile" class="label-form">Profile Picture</label>
+                        <input type="file" name="profile" id="profile" class="form-control" placeholder="upload" accept="image/jpeg, image/png" required>
+                
+                        <label for="photos" class="label-form">Upload Picture</label>
+                        <input type="file" name="photos" id="photos" class="form-control" placeholder="upload" accept="image/jpeg, image/png" multiple required>
+                
+                        <div class="col-lg-4 col-md-10 col-8 mx-auto">
+                            <button type="submit" class="form-control">Post <i class="bi bi-camera"></i></button>
+                        </div>
+                    </div>
+                </form>
+                
+        </div>
+        </div>
+
+<%- include('./includes/footer') %>

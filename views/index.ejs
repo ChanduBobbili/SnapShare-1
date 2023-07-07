@@ -1,0 +1,65 @@
+<%- include('./includes/head',{ title: 'SnapShare'}) %>
+            
+<section class="hero-section" id="section_1">
+    <div class="section-overlay"></div>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="row">
+            <div class="col-12 mt-auto mb-5 text-center">
+                <small>"Capture; Share; Connect; Your Memories, Our Platform"</small>
+                <h1 class="text-white mb-5">SnapShare</h1>
+                <a class="btn custom-btn smoothscroll" href="/upload">Post <i class="bi bi-camera"></i></a>
+            </div>     
+        </div>
+    </div>
+
+    <div class="video-wrap">
+        <img src="images/bg.jpg" class="custom-video" alt="Italian Trulli">
+    </div>
+</section>
+
+
+
+<section class="about-section section-padding" id="section_3">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-12 mb-4 mb-lg-0 d-flex align-items-center">
+                <div class="services-info">
+                    <h2 class="text-white mb-4">About SnapShare</h2>
+                    <p class="text-white"> "SnapShare," a cutting-edge photo-sharing application designed for seamless sharing and organizing of your precious memories. With its sleek and intuitive interface, SnapShare allows users to effortlessly upload, browse, and discover stunning photos and albums. Enjoy a personalized experience as you easily create and customize albums, add captions, and tag friends. Share your moments instantly with friends and family through secure and private sharing options. Whether it's a breathtaking vacation shot or a heartfelt family gathering, SnapShare preserves your memories in stunning clarity. Join the SnapShare community and embark on a visual journey like never before, where memories are cherished and connections are strengthened.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="about-text-wrap">
+                    <img src="images/pexels-alexander-suhorucov-6457579.jpg" class="about-image img-fluid">
+                    <div class="about-text-info d-flex">
+                        <div class="d-flex">
+                            <i class="about-text-icon bi-person"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h3>a happy moment</h3>
+                            <p class="mb-0">your amazing festival experience with us</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- 
+<section class="about-section section-padding" id="section_3">
+    <form action="/filestack" method="POST">
+        <input type="file" name="profile" id="contact-file" class="form-control" placeholder="upload" accept="image/jpeg, image/png" required>
+        <button type="submit" class="form-control">Post <i class="bi bi-camera"></i></button>
+    </form>
+</section> -->
+
+<script>
+    if (posts.length === 0) {
+    document.getElementById("no-posts").style.display = "block";
+    } else {
+    document.getElementById("swipwer-body").style.display = "block";
+    }
+</script>
+
+<%- include('./includes/footer') %>

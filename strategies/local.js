@@ -29,7 +29,7 @@ passport.use(
             if(!email || !passport ) throw new Error('Missing Credentails!');
             const userDB = await db.getDb().collection('users').findOne({ email });
             if(!userDB) throw new Error('User not found!');
-            const matchb = bcrypt.compareSync(password, userDB.hashPassword);
+            const matchb = bcrypt.compareSync(password, userDB.password);
             if(matchb){
                 console.log('Authenticated successfully');
                 done(null, userDB);

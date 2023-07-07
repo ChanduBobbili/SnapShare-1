@@ -19,7 +19,7 @@ router.post('/register', (req, res)=> {
         const newUser = {
             username: req.body.logname,
             email: req.body.logemail,
-            hashPassword: hash,
+            password: hash,
             createdAt: new Date()
         };
         const userResult = db.getDb().collection('users').insertOne(newUser);

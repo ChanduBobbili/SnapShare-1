@@ -131,6 +131,7 @@ body {
 .heading-con small {
     color: var(--white-color);
     text-transform: capitalize;
+    font-size: 0.8rem;
 }
 
 .btn-login{  
